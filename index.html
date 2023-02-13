@@ -39,7 +39,7 @@
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#portfolio">Portfolio</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#skills">Skills</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#education">Education</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="assets\resume_rachael_friedman.pdf" target=_blank">Resume</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="assets\resume_bruno_barreto.pdf" target=_blank">Resume</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#interests">Interests</a></li>
 
                 </ul>
@@ -55,10 +55,10 @@
                         <span class="text-primary">Barreto</span>
                     </h1>
                     <div class="subheading mb-5">
-                        Data Analyst ·
+                        Data Scientist ·
                         <a href="mailto:bruno@barreto.us">bruno@barreto.us</a>
                     </div>
-                    <p class="lead mb-5">I am a data analyst with a background in data analytics consulting, who is passionate about helping organizations unpack and leverage data to make strategic decisions and improve business performance. My detail-oriented and collaborative approach to solving problems enables me to create clean and reliable datasets through data transformations, design tailored visualizations and metrics that highlight insights in the data, and clearly communicate actionable findings back to my stakeholders.</p>
+                    <p class="lead mb-5">I am a data scientist with a background in bioinformatics and a passion for designing large-scale, future-proof solutions to modern problems. My methodical and measured approach to solving novel problems allows me to create intuitive and polished machine learning pipelines that effectively clean real-world datasets, visualize underlying trends, and optimize finely-tuned models with an eye towards future considerations and model improvements.</p>
                     <div class="social-icons">
                         <a class="social-icon" href="https://www.linkedin.com/in/brunocmbarreto/" target=_blank><i class="fab fa-linkedin-in"></i></a>
                         <a class="social-icon" href="https://github.com/BrunoCMBarreto" target=_blank><i class="fab fa-github"></i></a>
@@ -73,17 +73,14 @@
                     <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                         <div class="flex-grow-1">
                             <h3 class="mb-0">Accident Severity Predictor</h3>
-                            <div class="subheading mb-3"><a href="https://github.com/BrunoCMBarreto/aviation-accident-severity-project" target=_blank>Github Repo</a> · <a href="https://share.streamlit.io/rgfriedman/airbnb_listings_capstone/main/app/hosting_helper.py" target=_blank>Steamlit App</a></div>
+                            <div class="subheading mb-3"><a href="https://github.com/BrunoCMBarreto/aviation-accident-severity-project" target=_blank>Github Repo</a></div>
                             <img src="img\Flight_Report.jpg" width="450" height="250">
                             <br><br>
                             <p>The goal of this project was to build a model that can predict the severity of a flight accident from a formal report detailing the events that led up to it. The model would then be used to determine the risk factors that lead to lethal accidents, so that future regulations and aviation guidelines could be directed towrds addressing them</p>
                             
-                            <p>The goal of this project was to build a model that predicts the popularity of Airbnb listings in Washington DC and returns recommendations on what to add to the listing to increase its chance of being popular. Popularity for this project is defined as a listing having a 4.8 overall rating or above and at least 60 total reviews.</p>
+                            <p>To accomplish this, a dataset of 30,000 U.S. flight accident reports and associated metadata was assembled from the National Transportation Safety Board. This data was cleaned of missing or incomplete entries and underwent natural language processing to extract key feature information and remove self-referrential terms that would otherwise distort the model's results.</p>
 
-                            <p>Data was collected on 8,000 Washington DC listings from Inside Airbnb’s publicly available data and overlayed with venue data on Washington DC neighborhoods from a Foursquare API pull. The listings were cleaned using a combination of feature engineering and natural language processing techniques to prepare for modeling.</p>
-
-                            <p>The best predictive model and best interpretive model were deployed together in the app for hosts to generate a popularity prediction and recommendations. An Extra Trees Classifier paired with oversampling the minority class was the best model at predicting listing popularity, with an 85% accuracy rate on testing data compared to a 77% baseline. The best interpretive model was Logistic Regression, with an 84% accuracy rate on testing data compared to a 77% baseline, and the coefficients were used to produce listing improvement recommendations.</p>
-
+                            <p>The highest performing predictive model had its feature weights analysed to determine the terms that best predicted accident severity. From this, we were able to determine that the improper installation and maintenance of key components such as the airframe or engine transmission were disproportionally important causes of high-severity flight accidents.</p>
 
                         </div>
 
@@ -94,9 +91,10 @@
                             <div class="subheading mb-3"><a href="https://github.com/BrunoCMBarreto/bts-delay-prediction-project" target=_blank>Github Repo</a></div>
                             <img src="img\BTS_Logo.png" width="450" height="250">
                             <br><br>
-
-                            <p>The goal of this project was to collaborate with data scientist peers and build a model that predicts an adoption outcome for animals taken into the Austin City Animal Center. This shelter is a no-kill shelter, so this model will help with better planning for capacity at the shelter by predicting which animals are likely to be adopted.</p>
-                            <p>Data on 150,000 animal intakes at the shelter were provided from the Austin, Texas government data site. The data was thoroughly cleaned and prepared for modeling. Best performing models for the six different animal intake types were developed using a Gradient Boosting Classifier for each. For the most common intake type of stray animals, the model showed a 83% accuracy score on testing data compared to a 55% baseline score. These models were deployed together in an app that the Austin City Animal Center can use to generate predictions on their new incoming animals.</p>
+                            <p>The goal of this project was to work with the Bureau of Transportation Statistics to design a model of commercial flight delays in the U.S. that could be used to identify the most important data points for delay prediction and direct the Bureau's future data collection efforts towards the highest-priority information.</p>>
+                            
+                            <p>Data on 6,000,000 commercial flights collected by the BTS across 2022 was obtained and used to train multiple predictive classifer models. All data was exhausively cleaned of missing or irrelevant information. Final model performance highlighted the uncomfortable reality that the BTS' flight delay dataset has no meaningful connection with flight delays and connot be used to predict them. A cursory review of the scientific liturature was coupled with model results to direct the BTS on what data should be added to improve the predictive power of its information.</p>>
+                            
                         </div>
 
                     </div>
@@ -104,11 +102,14 @@
                         <div class="flex-grow-1">
                             <h3 class="mb-0">Subreddit Community NLP Classifier</h3>
                             <div class="subheading mb-3"><a href="https://github.com/BrunoCMBarreto/subreddit-nlp-classification-project" target=_blank>Github Repo</a></div>
-                            <img src="img\reddit.jpg" width="450" height="250">
+                            <img src="img\Reddit.jpg" width="450" height="250">
                             <br><br>
-                            <p>The goal for this project was to build a model using natural language processing techniques to predict whether a given post came from the AskWomen or AskMen subreddit and explore the differences in topics of conversation for each group.
-                              <br><br>
-                              Using Pushshift’s API, 50,000 subreddit posts from both AskWomen and AskMen were collected. The posts were then cleaned and count vectorized to prepare for modeling. The Naïve Bayes model performed the best at predicting which subreddit a given post came from with a 72% accuracy rate on testing data compared to a 50% baseline. The upper limit on accuracy scores remained in the low 70s, as it turns out the topics of conversation in the AskWomen and AskMen are very similar when looking at the most common words and phrases.</p>
+                            <p>The goal for this project was to design a model  using natural language processing techniques that could determine whether a given post originated from the r/playstation or r/xbox subreddits and identify the differences in discussion topics that make these two communities distinct from one another.</p>>
+                            
+                            <p>Utilizing the Pushshift API, 10,000 subreddit posts from both r/playstation and r/xbox were collected. These posts were then cleaned of missing or self-referrential data that could allow the model to circumvent its task and subsequently vectorized for model training.</p>
+                            
+                            <p>A logistic regression model with 85% accuracy was chosen as the highest performing model and analyzed to determine the topics within each community. As the lower model accuracy shows, the two communities are very similar overall and primarily differ in the platform-specific features prioritize discussing. The r/playstation subreddit focuses on playstation-exclusive title and network features while r/xbox discusses xbox-exclusive titles and GamePass offers.</p>
+                            
                         </div>
 
 
@@ -128,28 +129,22 @@
                       - GitHub<br>
                       - Streamlit<br>
                       - SQL<br>
-                      - Qlik<br>
-                      - Power BI<br>
-                      - Excel<br>
-                      - Azure DevOps<br>
-                      - Qualtrics<br></p>
-                    <div class="subheading mb-3">Data Wrangling</div>
-                    <p>- Survey creation<br>
-                      - Data collection<br>
-                      - API calls<br>
+                      - Tensorflow<br>
+                      - PyTorch<br>
+                      - Azure<br>
+                      - PySpark<br>
+                      - Java<br></p>
+                    <div class="subheading mb-3">Data Analysis & Modeling</div>
+                    <p>- Data collection<br>
                       - Exploratory data analysis<br>
                       - Feature engineering<br>
-                      - ETL data pipelines<br>
-                      - Master data<br>
-                      - Relational database design<br></p>
-                    <div class="subheading mb-3">Data Analysis & Modeling</div>
-                    <p>- BI Visualizations<br>
-                      - KPI creation<br>
-                      - Reoccuring reporting<br>
+                      - Regression modelling<br>
                       - Natural language processing<br>
+                      - Classification modelling<br>
+                      - Deep learning<br>
                       - Computer vision<br>
-                      - Statistical modeling<br>
-                      - Supervised and unsupervised machine learning<br></p>
+                      - Clustering models<br>
+                      - Generative modelling<br></p>
 
 
                 </div>
@@ -184,10 +179,11 @@
                 <div class="resume-section-content">
                     <h2 class="mb-5">Interests</h2>
                     <p>
-                    As a data analyst, I enjoy reading about and exploring different data tools and concepts in my free time.
-                    Currently, I am working on building an AI bot that can rap battle.
+                    As a data scientist, I enjoy reading up on the most cutting edge developments in the world of machine learning and seeing how they can be applied to my work.
+                    In my free time, I'm currently working on improving a Stable Diffusion image generator model for use in audio and protein modelling.
+
                    </p>
-                    <p class="mb-0">When I am not focused on data analytics, you can find me on the volleyball court, listening to any Drake album, eating copious amounts of sushi, and going on long walks with my dog, Peanut. </p>
+                    <p class="mb-0"> Outside of my work in Data Science, I can often be found enjoying my ever-growing collection of books and games, hiking across the trails of the midwest, or searching for yet another restaurant with a knack for preparing friend rice. Despite all these options, there is a good chance you'll instead find me playing Minecraft for the 10,000th time.</p>
                 </div>
             </section>
         </div>
